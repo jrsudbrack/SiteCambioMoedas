@@ -1,0 +1,22 @@
+{
+  "name": "sitecambiomoedas",
+  "version": "1.0.0",
+  "description": "Projeto para disciplina desenvolvimento WEB 2",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrsudbrack/SiteCambioMoedas.git"
+  },
+  "author": "José Roberto Sudbrack",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrsudbrack/SiteCambioMoedas/issues"
+  },
+  "homepage": "https://github.com/jrsudbrack/SiteCambioMoedas#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
