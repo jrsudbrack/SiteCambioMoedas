@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Carteira</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    
+</head>
+<style>
+  body{
+    background-image: url('/images/background-wallet.jpg');
+  }
+  .col{
+    background-color: rgb(37, 35, 35);
+    margin: 5%;
+    width: 100vw;
+    height: 50vh;
+    border-radius: 20px 20px 20px 20px;
+    color: white;
+  }
+  .head_text{
+    height: 120px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  /* Estilo específico para a div que contém os botões */
+  .buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Adicione margem entre os botões, se necessário */
+  .buttons-container button {
+    margin: 0 5px;
+  }
+</style>
+<%- include('./common/header.ejs') %> 
+<body> 
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="head_text">
+          <h1>Dolar</h1>
+        </div>
+        <div>
+          <h2>$ <%= wallet.dolar %> </h2>
+        </div>
+      </div>
+      <div class="col">
+        <div class="head_text">
+          <h1>Euro</h1>
+        </div>
+        <div>
+          <h2>€ <%= wallet.euro %></h2>
+        </div>
+      </div>
+      <div class="col">
+        <div class="head_text">
+          <h1>Libra Esterlina</h1>
+        </div>
+        <div>
+          <h2>£ <%= wallet.libra %></h2>
+        </div>
+      </div>
+      <div class="col">
+        <div class="head_text">
+          <h1>Real</h1>
+        </div>
+        <div>
+          <h2>R$ <%= wallet.real %></h2>
+        </div>
+      </div>
+    </div>
+    <div class="buttons-container">
+      <form action="/v2/sacar" method="GET">
+        <button type="submit" class="btn btn-primary btn-lg">Sacar</button>
+      </form>
+    </div>    
+  </div>
+</body>
+</html>

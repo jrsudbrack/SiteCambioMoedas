@@ -1,0 +1,22 @@
+<nav class="navbar navbar-dark bg-dark d-flex justify-content-between">
+    <div>
+        <a class="navbar-brand" href="/v2/home">Money Store</a>
+    </div>
+    <div class="d-flex">
+        <form action="/v2/painel" method="get" class="form-inline">
+            <button type="submit" class="btn btn-secondary">Painel Admin</button>
+        </form>
+        <form action="/v2/carteira" method="get" class="form-inline">
+            <button type="submit" class="btn btn-success">Carteira</button>
+        </form>
+        <form action="/v2/sair" method="get" class="form-inline">
+            <button type="submit" class="btn btn-danger">Sair</button>
+        </form>
+    </div>
+</nav>
+
+<style>
+    .form-inline{
+        padding-right: 5px;
+    }
+</style>

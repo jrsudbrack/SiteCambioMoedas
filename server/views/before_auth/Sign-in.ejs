@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      max-width: 400px;
+      width: 100%;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-container .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Money Store</h2>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-primary mr-2" onclick="showLoginForm()">Entrar</button>
+      <button type="button" class="btn btn-primary" onclick="showRegisterForm()">Cadastrar-me</button>
+    </div>
+
+    <form id="loginForm" action="\v2\login" method="post">
+      <br>
+      <div class="form-group">
+        <label for="username">Email:</label>
+        <input type="text" id="username" class="form-control" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" id="password" class="form-control" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+    </form>
+
+    <form id="registerForm" action="\v2\cadastro" method="post" style="display: none;">
+      <br>
+      <div class="form-group">
+        <label for="newFullName">Nome completo:</label>
+        <input type="text" id="newFullName" class="form-control" name="nome" required>
+      </div>
+      <div class="form-group">
+        <label for="CPF">CPF:</label>
+        <input type="text" id="newCPF" class="form-control" name="cpf" required>
+      </div>
+      <div class="form-group">
+        <label for="newEmail">Email</label>
+        <input type="text" id="newEmail" class="form-control" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="newPassword">Senha:</label>
+        <input type="password" id="newPassword" class="form-control" name="senha" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    </form>
+  </div>
+
+  <script>
+    function showLoginForm() {
+      document.getElementById("loginForm").style.display = "block";
+      document.getElementById("registerForm").style.display = "none";
+    }
+
+    function showRegisterForm() {
+      document.getElementById("loginForm").style.display = "none";
+      document.getElementById("registerForm").style.display = "block";
+    }
+  </script>
+</body>
+</html>
